@@ -1,0 +1,8 @@
+# Step 1: Build
+FROM openjdk:17-jdk-slim
+
+# Step 2: Copy jar
+COPY target/auth-service.jar app.jar
+
+# Step 3: Run
+ENTRYPOINT ["java","-jar","/app.jar"]
